@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PADELBLADET</title>
+    <meta name="description" content="Lær alt om padel - en sport der kombinerer tennis og squash. Få historien, reglerne og tips til at komme i gang med padel.">
+    <meta name="keywords" content="padel, padel historie, padel regler, padel udstyr, padel sport">
+    <meta name="author" content="Esra Shamasneh">
+    <link rel="stylesheet" href="../css/hvad-er-padel.css">
+</head >
+
+<!--Her indsætter jeg baggrundsbilledet-->
+<section class="background-container" style="background-image: url('../img/bane_tom.webp')"></section>
+
+<!--Her indsætter jeg logoet og laver det til et link til forsiden-->
+<a href="index.html">
+    <img id="logo" src="../img/logo.png" alt="PADEL BLADET logo">
+</a>
+
+<!--Her laver jeg navbaren som indholder alle mine submenuer. Her linker jeg også til de tre artikler jeg har lavet -->
+<!--Jeg har sat forskellige klasser og id på menupunkterne så jeg kan style dem i css-->
+<nav class="head_menu">
+    <ul class="menu_clicks">
+        <li class="click">Nyheder
+            <ul class="submenu">
+                <li><a href="#">Nyt udstyr på markedet</a></li>
+                <li><a href="#">Faciliteter i centrene</a></li>
+                <li><a href="#">Danmarks rangliste</a></li>
+                <li><a href="#">Verdens rangliste</a></li>
+                
+            </ul>
+        </li>
+        <li class="click">Ny i padel
+            <ul class="submenu">
+                <li><a href="hvad_er_padel.html">Hvad er padel?</a></li>
+                <li><a href="#">Regler</a></li>
+                <li><a href="#">Padels historie</a></li>
+            </ul>
+        </li>
+        <li class="click">Budgetvenlige Tips
+            <ul class="submenu">
+                <li><a href="padel_paa_budget.html">Padel på budget</a></li>
+                <li><a href="#">Prisforskelle i tidsrum</a></li>
+                <li><a href="#">Prisklasser i udstyr</a></li>
+            </ul>
+        </li>
+        <li class="click">Guide til udstyr
+            <ul class="submenu">
+                <li><a href="guide_til_bat.html">Guide til bat</a></li>
+                <li><a href="#">Guide til bolde</a></li>
+                <li><a href="#">Guide til sko</a></li>
+                <li><a href="#">Guide til tøj</a></li>
+            </ul>
+        </li>
+        <li class="click" id="placeringer_menu">Spil Padel
+            <ul class="submenu">
+                <li><a href="#">Padelcenter nær dig</a></li>
+                <li><a href="#">Medlemskab</a></li>
+                <li><a href="#">Hvordan finder jeg en makker?</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</header>
+
+<body>
+     <!--Her laver jeg introen til artiklen-->
+<h1>HVAD ER PADEL?</h1>
+<p id="padelIntro">SYNES DU OGSÅ AT PADEL KAN VÆRE EN SMULE SVÆRT AT FORSTÅ? SÅ ER DU IKKE DEN ENESTE! DERFOR KOMMER DER HER EN FORKLARING!</p>
+
+<!--Her indsætter jeg en pil ned-->
+<img id="pilNed" src="../img/pil_ned.png" alt="Pil ned">
+
+<!--Her indsætter jeg et billede-->
+<img id=mand src="../img/mand_paa_bane.webp" alt="Mand på padelbane">
+
+<!--Her skriver jeg selve artiklen med en overskrift-->
+<section id="blur">
+    <h2>EN GENIAL SAMMENSÆTNING</h2>
+    <p class="padelArtikel">Forestil dig en god cocktail blandet med tennis squash - Så får du Padel! Padel er en sport som har rødder i Mexico og som sprudler verden over. Også i Danmark. Læs mere om Padels historie HER</p>
+    <p class="padelArtikel">Uanset om du er til konkurrence eller bare sjov og leg, er padel det perfekte sted at udleve din sportslige lidenskab.</p>
+    <p class="padelArtikel">Alt hvad du behøver er et padelbat, en bold, et par venner, og så er du klar til at erobre banen. Uanset om du foretrækker at spille indendørs eller udendørs, om dagen eller om aftenen, er padel altid en god idé!</p>
+</section>
+
+</body>
+
+
+
+<script>
+    // Her laver jeg en eventlistener, der holder med når brugeren scroller. 
+    // Derefter erklære jeg hvor mange pixels brugeren skal scrolle for at baggrunden slører.
+    // Herefter laver jeg præmis at hvis der bliver scrollet mere end jeg har erklæret i varibalen scrollThisMuch vises sløringseffekten.
+    // Derefter har jeg lavet en "else" til når der bliver rullet op igen
+    window.addEventListener('scroll', function() {
+        var bgCont = document.querySelector('.background-container');
+
+        var scrollThisMuch = 200;
+
+        if (window.scrollY > scrollThisMuch) {
+            bgCont.style.filter = 'blur(5px)';
+        } else { 
+            bgCont.style.filter = 'none';
+        }
+    });
+</script>

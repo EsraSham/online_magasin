@@ -1,0 +1,202 @@
+
+/*Fjerner alle stylingelementer på siden*/
+*{
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+}
+
+/*Her sætter jeg mit logo ind og positionerer den i venste øverste hjørne og giver den en størrelse*/
+#logo{
+    width: 15%;
+    margin-top: -163px;
+    margin-bottom: 0;
+    margin-left: 35px;
+    position: fixed;
+}
+
+/*Margin omkring menuerne*/
+.head_menu{
+    margin:40px 
+  }
+
+/*Her placerer jeg linksene i menuen i midten vandret på skærmen*/
+.menu_clicks{
+    display: flex;
+    justify-content: center;
+}
+
+/*Her bestemmer jeg farve, font(+ backup font) og størrelse på menu links*/
+.click{
+    font-family: 'boldtext', sans-serif;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    margin-left: 50px;
+}
+
+/*Her sætter jeg positionen til fixed så menupunkterne forbliver på siden*/
+/*Så sætter jeg top til 0 så de er øverst på siden og deres bredde til 100% */
+/*så sætter jeg z-index til 999 så punkterne er foran alt på siden*/
+.head_menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    
+}
+
+/*Her placere jeg mine menupunkter helt ud til højre og giver den derefter noget plads. Og så fjerner jeg alt stlying*/
+.menu_clicks {
+    display: flex;
+    justify-content: end;
+    margin-right: 100px;
+    list-style: none;
+}
+
+/*Her sætter jeg fonten(+ backup font), font størrelsen, farven og tilføjer marginer mellem dem*/
+/*Og så sørger jeg for at submenuerne vises relativt ift dets menupunkt*/
+.click {
+    font-family: 'boldtext', sans-serif;
+    font-size: 15px;
+    color: white;
+    margin: 0 20px;
+    position: relative; 
+}
+
+/*Her skjuler jeg submenuen, når men ikke hover på dem, giver baggrunden en farve og giver lidt plads omkring punkterne*/
+/*Og så sætter jeg det hele foran alt andet med z-index og sætter skygge på*/
+.submenu {
+    display: none;
+    list-style: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+/*Her giver jeg submenu punkterne en farve, fjerner alt styling og laver en smooth transition på farveskift når man hover*/
+a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/*Her laver jeg en hover med en farve så man kan se når man holde musen på et punkt*/
+a:hover {
+    color: #666;
+}
+
+/*Her laver jeg mellemrum mellem submenupunkterne */
+.submenu li {
+    margin: 5px 0; 
+    
+}
+
+/* Her sætter jeg en hover på så submenuen vises når man holder musen over*/
+.menu_clicks li:hover .submenu {
+    display: block; 
+}
+
+
+/*jeg sætter position til fixed så billedet ikke flytter sig og fjerner mellemrummet fra top og venstre kant*/
+/*Så sætter jeg højde og bredde til 100% og size til cover så den dækker hele baggrunden*/
+/*Så positionerer jeg billedet i midten og får den til ikke at gentage sig selv*/
+/*Så sætter jeg z-index til -1 så billedet hele tiden er bagved alt indhold*/
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/*Her styler jeg overskriften på artiklen og giver den plads omkring og en skygge*/
+h1{
+    font-family: 'boldtext', sans-serif;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top:180px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); 
+}
+
+/*Her styler jeg introartiklen og giver den skygge og en sløret baggrund*/
+#padelIntro{
+    font-family: 'thintext';
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); 
+    backdrop-filter: blur(8px);
+}
+
+/*Her styler jeg pilen nedad*/
+#pilNed{
+    margin-left: 568px;
+    margin-top: 30px;
+    height: 100px;
+}
+
+/*Her styler jeg artiklen med skygger, marginer og størrelse*/
+#mand{
+    width: 70%;
+    margin-top: 200px;
+    margin-left: 190px;
+    margin-bottom: 35px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+/*Her styler jeg overskriften med skygger, marginer, farve og størrelse*/
+h2{
+    font-family: 'boldtext', sans-serif;
+    color: white;
+    z-index: 1;
+    margin-top: 15px;
+    margin-left: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+/*Her styler jeg artiklen med skygger, marginer og font*/
+.padelArtikel{
+    font-family: 'thintext', sans-serif;
+    font-size: 16px;
+    margin-left: 10px;
+    color: white;
+    width: fit-content;
+    margin-top: 20px;
+    text-shadow: 0 0 10px #000;
+}
+
+/*Her slører jeg baggrunden og giver den en størrelse*/
+#blur{
+    margin-top: -500px;
+    backdrop-filter: blur(8px);
+    margin-left: 230px;
+    margin-right: 470px;
+}
+
+
+
+/*Her laver jeg mine egne fonte, som er en jeg har hentet ned fra google og kaldt for "boldtext" og "thintext"*/
+/*Jeg har placeret de downloadede fonte mappen "fonts", som jeg har linket til her*/
+@font-face {
+    font-family: 'boldtext';
+    src: url(../fonts/Hop-Expanded-Trial-Normal-Trial-Bold-BF65f26158a022b.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'thintext';
+    src: url(../fonts/Hop-Expanded-Trial-Normal-Trial-Thin-BF65f26158eeb58.otf) format('truetype');
+}
